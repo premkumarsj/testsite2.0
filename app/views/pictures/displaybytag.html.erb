@@ -1,0 +1,12 @@
+<h1>All Relevant Posts</h1>
+<% @pictures.each do |picture| %>
+	<% if (picture.tag).include? @tag %>
+		<ol class="microposts">
+		<li id="<%= picture.id %>">
+  		<span class="content">
+			<%= image_tag picture.photo.url(:thumb) %>
+  		</span>
+		</li>
+		</ol>
+	<% end %>
+<% end %>

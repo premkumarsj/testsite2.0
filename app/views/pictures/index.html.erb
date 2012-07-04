@@ -1,0 +1,17 @@
+<h1>All Pictures</h1>
+<% @pictures.each do |picture| %>
+<ol class="microposts">
+<li id="<%= picture.id %>">
+  <span class="content">
+	<%= image_tag picture.photo.url(:thumb) %>
+	
+  </span>
+  <span class="timestamp">
+	<%= picture.tag %> | 
+	<%= link_to "delete", picture, method: :delete,
+                                  data: { confirm: "Are You sure you want to delete the post?" } %>
+  </span>
+</li>
+</ol>
+<% end %>
+

@@ -1,0 +1,12 @@
+<h1>Search Images By Tags</h1>
+	<div class="btn-group">
+		<button class="btn">--Choose--</button>
+		<button class="btn dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<% @tags.each do |tag| %>
+				<li><%= link_to tag, displaybytag_pictures_path(:tag => tag) %></li>
+			<% end %>
+		</ul>
+	</div>

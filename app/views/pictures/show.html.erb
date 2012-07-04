@@ -1,0 +1,7 @@
+<h1>Displaying Uploaded Image</h1>
+<div>
+<%= image_tag @picture.photo.url(:large) %>
+</div>
+<span>
+<h3>Tags :</h3> <%= @picture.tag %>
+</span>
